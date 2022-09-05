@@ -93,14 +93,6 @@ const server = app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send(`<h1> Bienvenido </h1> <a href="/products">ir a productos</a> `);
-});
-
-/* It's a function that takes a path and a callback function. The callback function takes two
-parameters, req and res. The req parameter is the request object, and the res parameter is the
-response object. The response object has a method called send, which takes a string as a parameter.
-The string is the HTML code that will be displayed in the browser. */
-app.get("/products", (req, res) => {
   contenedor.getAll().then((data) => {
     res.send(
       `<div style="display:flex ">${data.map(
@@ -110,7 +102,15 @@ app.get("/products", (req, res) => {
       <a href = "/productsRandom">Ir a random</a></div>`
     );
   });
+
 });
+
+/* It's a function that takes a path and a callback function. The callback function takes two
+parameters, req and res. The req parameter is the request object, and the res parameter is the
+response object. The response object has a method called send, which takes a string as a parameter.
+The string is the HTML code that will be displayed in the browser. */
+app.get("/products", (req, res) => {
+  });
 
 app.get("/productsRandom", (req, res) => {
   const random = Math.floor(Math.random() * 4 + 1);
