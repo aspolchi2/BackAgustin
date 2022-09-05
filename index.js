@@ -2,7 +2,7 @@ const fs = require("fs");
 const express = require("express");
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 
 /* It's a class that allows you to create a file, save data to it, get all the data from it, get a
