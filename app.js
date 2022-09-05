@@ -4,7 +4,6 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 
-app.use(express.static('public'))
 
 /* It's a class that allows you to create a file, save data to it, get all the data from it, get a
 specific data from it, delete a specific data from it, and delete all the data from it. */
