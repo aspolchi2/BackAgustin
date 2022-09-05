@@ -89,7 +89,7 @@ class Contenedor {
 
 const contenedor = new Contenedor("productos");
 
-const server = app.listen(PORT, () => {
+const server = app.listen("https://back-agustin.vercel.app/", () => {
   console.log("server iniciado");
 });
 
