@@ -100,7 +100,7 @@ app.get("/", (req, res) => {
 parameters, req and res. The req parameter is the request object, and the res parameter is the
 response object. The response object has a method called send, which takes a string as a parameter.
 The string is the HTML code that will be displayed in the browser. */
-app.get("https://back-agustin.vercel.app/products", (req, res) => {
+app.get("/products", (req, res) => {
   contenedor.getAll().then((data) => {
     res.send(
       `<div style="display:flex ">${data.map(
