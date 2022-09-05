@@ -99,6 +99,8 @@ app.get("/", (req, res) => {
         (prod) =>
           `<p>${prod.title}</p> <p>Precio: ${prod.price}</p> <img src= ${prod.thumbnail}></img>`
       )} 
+      </div>
+      </br><div>
       <a href = "/productsRandom">Ir a random</a></div>`
     );
   });
