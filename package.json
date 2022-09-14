@@ -1,21 +1,13 @@
 {
-  "name": "backagustin",
+  "name": "entregable_4",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aspolchi2/BackAgustin.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/aspolchi2/BackAgustin/issues"
-  },
-  "homepage": "https://github.com/aspolchi2/BackAgustin#readme",
   "dependencies": {
     "express": "^4.18.1",
     "nodemon": "^2.0.19"
