@@ -35,24 +35,16 @@ routerProducto.post("/", async (req, res) => {
 });
 
 routerProducto.put("/:id", async (req, res) => {
-  if (
-    isNaN(req.params.id) &&
-    req.body.title &&
-    isNaN(req.body.price) &&
-    req.body.thumbnail
-  ) {
-    let { title, price, thumbnail } = req.body;
-    const producto = await contenedor.update(Number(req.params.id), {
-      title,
-      price,
-      thumbnail,
-    });
-    res.json(producto ?? { error: "producto no encontrado" });
-  } else {
-    res.json({
-      error: "no se pudo registrar el producto, verifique el objeto enviado",
-    });
+  if(isNaN(req.params.id)){
+    res.json({error: "debe ser un numero"})
   }
+  let { title, price, thumbnail } = req.body;
+  const producto = await contenedor.update(Number(req.params.id), {
+    title,
+    price,
+    thumbnail,
+  });
+  res.json(producto ?? { error: "producto no encontrado" });
 });
 
 routerProducto.delete("/:id", async (req, res) => {
